@@ -17,7 +17,7 @@ app.add_middleware(
     # Set FRONTEND_ORIGIN on Render if you want to restrict further.
     allow_origins=[
         "http://localhost:8501",
-        "https://personalexpensetracker-ggjjpahgc8tkrpjnerbor3.streamlit.app",
+        "https://personalexpensetracker-cg6od6hcwjbxatihihk3jx.streamlit.app/",
     ],
     allow_credentials=False,
     allow_methods=["*"],
