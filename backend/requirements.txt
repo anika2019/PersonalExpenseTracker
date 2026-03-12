@@ -3,4 +3,5 @@ uvicorn[standard]
 psycopg2-binary
 
 # If you load backend/.env at runtime (optional):
-# python-dotenv
+ python-dotenv
+gunicorn
