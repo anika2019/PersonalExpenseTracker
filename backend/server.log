@@ -1,0 +1,575 @@
+2026-03-11 14:26:24,739 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'personal_expenses.expenses_daily' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'personal_expenses.expenses_daily' doesn't exist
+2026-03-11 14:26:41,342 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'personal_expenses.expenses_daily' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'personal_expenses.expenses_daily' doesn't exist
+2026-03-11 14:26:59,718 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'personal_expenses.expenses_daily' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'personal_expenses.expenses_daily' doesn't exist
+2026-03-11 14:27:01,790 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'personal_expenses.expenses_daily' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 133, in save_expenses_for_date
+    cur.execute("DELETE FROM expenses_daily WHERE expense_date = %s", (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'personal_expenses.expenses_daily' doesn't exist
+2026-03-11 14:32:54,615 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'field list'
+2026-03-11 14:33:01,768 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'field list'
+2026-03-11 14:33:18,840 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'field list'
+2026-03-11 14:33:20,925 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'where clause'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 133, in save_expenses_for_date
+    cur.execute("DELETE FROM expenses WHERE expense_date = %s", (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'where clause'
+2026-03-11 14:34:05,864 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'field list'
+2026-03-11 14:34:15,990 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'field list'
+2026-03-11 14:34:30,712 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'field list'
+2026-03-11 14:34:32,776 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'where clause'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 133, in save_expenses_for_date
+    cur.execute("DELETE FROM expenses WHERE expense_date = %s", (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'where clause'
+2026-03-11 14:35:58,586 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'expense_date' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 74, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 119, in get_expenses_for_date
+    cur.execute(query, (target_date,))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'expense_date' in 'field list'
+2026-03-11 15:36:16,678 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Duplicate entry '2026-03-10' for key 'expenses.PRIMARY'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 75, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 177, in save_expenses_for_date
+    cur.execute(insert_sql, vals)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 106, in wrapper
+    result = method(cnx, *args, **kwargs)
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.IntegrityError: 1062 (23000): Duplicate entry '2026-03-10' for key 'expenses.PRIMARY'
+2026-03-12 09:16:45,409 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:17:07,864 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:17:09,922 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:17:42,246 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:17:57,910 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:17:59,993 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:22:19,375 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:22:34,652 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:22:36,706 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:25:54,378 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:25:56,451 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:26:18,794 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:26:20,877 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:28:27,169 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:28:43,596 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:28:45,663 - db_helper - ERROR - DATABASE_URL environment variable is not set
+2026-03-12 09:35:48,751 - db_helper - ERROR - Database operation failed
+Traceback (most recent call last):
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 78, in get_cursor
+    yield cursor
+  File "D:\Desktop\OneDrive - shivameducation.net\Documents\AJIT_YADAV\CodeBasicsBootCamp\CodeBasicsProjects\Python-Projects\PersonalExpenseTracker\backend\db_helper.py", line 180, in save_expenses_for_date
+    cur.execute(insert_sql, vals)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anite\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "expenses_pkey"
+DETAIL:  Key (date)=(2026-03-12) already exists.
+

@@ -1,0 +1,85 @@
+You can’t deploy your current setup (Streamlit + FastAPI + local MySQL) directly to Streamlit Cloud, because:
+
+Streamlit Cloud runs only the Streamlit app.
+It cannot reach localhost:8000 (your FastAPI) or your local MySQL.
+You need to split things into 2 services:
+
+Backend API (FastAPI) + hosted MySQL
+Frontend (Streamlit) on Streamlit Cloud talking to that API
+Below is the concrete flow.
+
+1. Move MySQL off your laptop
+Pick a hosted MySQL (or Postgres) provider (examples: Railway, Render DB, PlanetScale, Supabase for Postgres).
+
+Create a database.
+Run your table DDL there (the expenses table with date, income, homeloan, ...).
+Update backend/db_helper.py connection settings to point to that DB (host, user, password, db name, port).
+Test locally:
+
+# In backend folder
+uvicorn server:app --reload --port 8000
+# In another terminal
+streamlit run frontend/expense_analysis.py
+Make sure everything works against the hosted DB.
+
+2. Deploy FastAPI backend
+Use a general-purpose app host (Render, Railway, Fly.io, etc.). Example with Render-style deployment:
+
+Push your project to GitHub.
+In Render:
+Create a Web Service.
+Root directory: backend/ (or repo root with correct working dir).
+Start command:
+uvicorn server:app --host 0.0.0.0 --port $PORT
+Set environment variables for your DB (DB host/user/password) instead of hardcoding.
+After deploy, you’ll get a URL like:
+
+https://your-backend.onrender.com
+Verify:
+
+Open https://your-backend.onrender.com/docs and test /expenses/{date} or /analytics/month-summary.
+3. Prepare the Streamlit app for cloud
+In your repo:
+
+requirements.txt at repo root (for Streamlit app):
+
+streamlit
+requests
+pandas
+(Backend deps like fastapi, mysql-connector-python are only needed in the backend service, not Streamlit Cloud, unless you share a single requirements.txt and don’t mind extra packages.)
+
+In all frontend files (Add_Update.py, Expense_Category.py, Analytics_by_Month.py), change:
+
+API_URL = "http://localhost:8000"
+to something like:
+
+import streamlit as st
+API_URL = st.secrets["API_URL"]
+Ensure your entrypoint file is frontend/expense_analysis.py.
+
+Push updated code to GitHub.
+
+4. Deploy to Streamlit Cloud
+Go to share.streamlit.io
+
+“New app” → choose your GitHub repo.
+
+Main file: frontend/expense_analysis.py
+
+Python version: (pick one matching your local).
+
+Under Secrets in Streamlit Cloud settings, add:
+
+API_URL = "https://your-backend.onrender.com"
+Deploy.
+
+5. End-to-end behavior
+User hits Streamlit Cloud URL.
+Streamlit app calls API_URL (your FastAPI on Render/Railway) via requests.
+FastAPI uses db_helper to talk to the hosted MySQL database.
+Analytics and Add/Update behave exactly as they do locally.
+If you tell me which host you plan to use for:
+
+Backend (Render vs Railway vs Fly)
+Database (MySQL vs Postgres)
+I can give you specific config snippets (environment variables, connection strings, start commands) tailored to that platform.
