@@ -19,7 +19,7 @@ app.add_middleware(
         "http://localhost:8501",
         "https://personalexpensetracker-cg6od6hcwjbxatihihk3jx.streamlit.app/",
     ],
-    allow_credentials=False,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
