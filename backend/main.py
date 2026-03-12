@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-import db_helper
+from backend import db_helper
 
 app = FastAPI(title="Expense Tracker API")
 
