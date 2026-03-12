@@ -2,7 +2,9 @@ import streamlit as st
 import requests
 from datetime import datetime
 
-API_URL = "http://localhost:8000"
+from config import get_api_url
+
+API_URL = get_api_url()
 
 # Must match backend db_helper.COLUMNS (except DATE - set from date picker)
 COLUMNS = [

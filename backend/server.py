@@ -13,8 +13,13 @@ app = FastAPI(title="Expense Tracker API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    # Allow Streamlit Cloud frontend + local dev.
+    # Set FRONTEND_ORIGIN on Render if you want to restrict further.
+    allow_origins=[
+        "http://localhost:8501",
+        "https://personalexpensetracker-ggjjpahgc8tkrpjnerbor3.streamlit.app",
+    ],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

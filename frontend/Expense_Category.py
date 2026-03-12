@@ -4,7 +4,9 @@ from datetime import datetime
 import requests
 import pandas as pd
 
-API_URL = "http://localhost:8000"
+from config import get_api_url
+
+API_URL = get_api_url()
 # Date format used across app and Excel: dd-mm-yyyy
 DATE_FMT_DISPLAY = "%d-%m-%Y"
 DATE_FMT_API = "%Y-%m-%d"

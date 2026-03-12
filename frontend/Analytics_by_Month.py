@@ -5,7 +5,9 @@ import pandas as pd
 import requests
 import streamlit as st
 
-API_URL = "http://localhost:8000"
+from config import get_api_url
+
+API_URL = get_api_url()
 
 
 def analytics_by_month():
