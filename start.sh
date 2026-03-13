@@ -1,11 +1,15 @@
 #!/bin/bash
 
-# 1. Start FastAPI backend on port 8000
-# We use & to run it in the background
-echo "Starting FastAPI Backend..."
-#uvicorn backend.server:app --host 0.0.0.0 --port 8000 &
-gunicorn backend.server:app -w 1 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 &
+# 1. Start Backend
+# We add current directory to PYTHONPATH so it finds the 'backend' folder
+export PYTHONPATH=$PYTHONPATH:.
 
-# 2. Start Streamlit frontend on the port Render provides (default 10000)
+echo "Starting FastAPI Backend with Gunicorn..."
+gunicorn backend.server:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 &
+
+# 2. Wait for backend to stabilize
+sleep 5
+
+# 3. Start Frontend
 echo "Starting Streamlit Frontend..."
 streamlit run frontend/Add_Update.py --server.port 10000 --server.address 0.0.0.0
