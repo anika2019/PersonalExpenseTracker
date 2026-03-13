@@ -2,6 +2,7 @@
 FastAPI server connecting the MySQL data layer (db_helper) to the Streamlit frontend.
 """
 import math
+import os
 from datetime import datetime, timedelta
 
 from fastapi import FastAPI
@@ -15,11 +16,12 @@ app.add_middleware(
     CORSMiddleware,
     # Allow Streamlit Cloud frontend + local dev.
     # Set FRONTEND_ORIGIN on Render if you want to restrict further.
+    render_url = os.environ.get("RENDER_EXTERNAL_URL")
     allow_origins=[
         "http://localhost:8501",
         "http://localhost:8000",
         
-        "https://personalexpensetracker-1-2p6w.onrender.com",
+        render_url,
         
     ],
     allow_credentials=True,
