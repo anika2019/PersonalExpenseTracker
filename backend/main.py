@@ -12,18 +12,20 @@ from backend import db_helper
 
 app = FastAPI(title="Expense Tracker API")
 
+# Get Render URL from environment variable for CORS
+render_url = os.environ.get("RENDER_EXTERNAL_URL")
+
+# Build list of allowed origins
+allowed_origins = [
+    "http://localhost:8501",
+    "http://localhost:8000",
+]
+if render_url:
+    allowed_origins.append(render_url)
+
 app.add_middleware(
     CORSMiddleware,
-    # Allow Streamlit Cloud frontend + local dev.
-    # Set FRONTEND_ORIGIN on Render if you want to restrict further.
-    render_url = os.environ.get("RENDER_EXTERNAL_URL")
-    allow_origins=[
-        "http://localhost:8501",
-        "http://localhost:8000",
-        
-        render_url,
-        
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
