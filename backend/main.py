@@ -18,9 +18,9 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:8501",
         "http://localhost:8000",
-        "https://personalexpensetracker-cg6od6hcwjbxatihihk3jx.streamlit.app",
+        
         "https://personalexpensetracker-1-2p6w.onrender.com",
-        "https://personalexpensetracker-ggjjpahgc8tkrpjnerbor3.streamlit.app",
+        
     ],
     allow_credentials=True,
     allow_methods=["*"],
